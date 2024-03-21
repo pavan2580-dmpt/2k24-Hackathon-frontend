@@ -1,3 +1,89 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.scrollbar-thumb {
+  background-color: #888;
+}
+
+.scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.Hospital_register_inps {
+  background: transparent;
+  border: 2px solid;
+  width: 250px;
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.loader_btn {
+  cursor: not-allowed;
+  border: none;
+}
+
+.Loader_animate {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  border-bottom-color: transparent;
+  animation: Loading 1s linear infinite;
+}
+
+@keyframes Loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate((360deg));
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.modal-head-text {
+  @apply md:text-3xl text-xl font-semibold text-center max-w-5xl w-full;
+}
+
+.modal {
+  @apply fixed z-10 left-0 right-0 top-0 bottom-0 mx-auto bg-black/80;
+}
+
+.modal_wrapper {
+  @apply flex justify-start items-center flex-col absolute h-[95%] w-full bottom-0 bg-white rounded-t-3xl lg:px-40 px-8 pt-14 pb-72 overflow-auto;
+}
+
+.Second_banner{
+  background-position: center;
+  background-size: cover;
+}
